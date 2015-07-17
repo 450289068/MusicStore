@@ -19,5 +19,7 @@ namespace MusicStore.Models
     {
         public DbSet<Album> AlbumsContext { get; set; }
         public DbSet<Genre> GenresContext { get; set; }
+
+        public System.Data.Entity.DbSet<MusicStore.Models.Artist> Artists { get; set; }
     }
 }
