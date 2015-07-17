@@ -8,6 +8,10 @@ using System.Web;
 using System.Web.Mvc;
 using MusicStore.Models;
 
+// StoreManagerController
+// created: Dániel Egyed
+// egyed.daniel89@gmail.com
+
 namespace MusicStore.Controllers
 {
     public class StoreManagerController : Controller
