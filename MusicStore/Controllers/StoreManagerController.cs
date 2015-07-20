@@ -14,6 +14,12 @@ using MusicStore.Models;
 
 namespace MusicStore.Controllers
 {
+    /// <summary>
+    /// Az ASP.NET ismeri a scaffolding paradigmát, vagyis a fordító
+    /// maga képes előállítani a CRUD műveletekhez
+    /// (Create-Retrieve-Update-Delete) szükséges kódot.
+    /// "Controller with read/write actions"
+    /// </summary>
     public class StoreManagerController : Controller
     {
         private MusicStoreEntities db = new MusicStoreEntities();
