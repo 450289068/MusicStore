@@ -86,7 +86,7 @@ namespace MusicStore.Controllers
                 return HttpNotFound();
             }
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name", album.ArtistId);
-            ViewBag.GenreId = new SelectList(db.GenresContext, "GenreId", "Description", album.GenreId);
+            ViewBag.GenreId = new SelectList(db.GenresContext, "GenreId", "Name", album.GenreId);
             return View(album);
         }
 
