@@ -22,6 +22,7 @@ namespace MusicStore.Controllers
     /// </summary>
     public class StoreManagerController : Controller
     {
+        //Az adatbázis kontextus egy példányát tároló db(adatbázis műveletekhez)
         private MusicStoreEntities db = new MusicStoreEntities();
 
         // GET: StoreManager
