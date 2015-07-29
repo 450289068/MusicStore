@@ -28,7 +28,7 @@ namespace MusicStore.Controllers
         // GET: StoreManager
         /// <summary>
         /// Az Index() view megkapja az Albumok listáját, akárcsak a hozzájuk tartozó
-        /// műfaj(Genre) és előadó(Artist) adatokat, vagyi ahelyett, hogy az
+        /// műfaj(Genre) és előadó(Artist) adatokat, vagyis ahelyett, hogy az
         /// egyes listákat külön adatbázis kapcsolaton keresztül érné el,
         /// egyetlen alkalomm kell csak kapcsolódnia.
         /// </summary>
