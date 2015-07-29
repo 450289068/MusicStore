@@ -41,8 +41,8 @@ namespace MusicStore.Controllers
 
         // GET: StoreManager/Details/5
         /// <summary>
-        /// A Details() megkeresi az albumot az ID mező alapján,
-        /// és átadja azt view-nak
+        /// A Details(int) megkeresi az albumot az ID mező alapján,
+        /// és átadja azt a view-nak
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -61,8 +61,26 @@ namespace MusicStore.Controllers
         }
 
         // GET: StoreManager/Create
+        /// <summary>
+        /// A Create() művelet adatbevitelt vár a felhasználótól.
+        /// Lekérjük az üres űrlapot egy HTTP-GET kéréssel.
+        /// A ViewBag objektum lehetővé teszi, hogy adatokat juttassunk el a
+        /// view()-nak anélkül, hogy erősen típusos model objektumokat használnánk.
+        /// Átadjuk az előadók és a műfajok listáját, s erre a legjobb megoldás,
+        /// ha beletesszük a ViewBag-be mindkét listát.
+        /// A ViewBag attól dinamikus objektum, hogy tetszőlegesen használhatunk
+        /// olyan Property-ket is, amelyeket nem is definiáltunk. ( pl. ViewBag.Akarmi)
+        /// Az űrlapon a listákból kiválasztott elemek ArtistId és GenreId
+        /// néven utaznak tovább. Ezek az értékek SelectList objektumban térnek vissza
+        /// az űrlaphoz.
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Create()
         {
+            //A SelectList 3 paramétere:
+            //1.:
+            //2.:
+            //3.:
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name");
             ViewBag.GenreId = new SelectList(db.GenresContext, "GenreId", "Description");
             return View();
@@ -117,8 +135,9 @@ namespace MusicStore.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name", album.ArtistId);
-            ViewBag.GenreId = new SelectList(db.GenresContext, "GenreId", "Description", album.GenreId);
+            ViewBag.GenreId = new SelectList(db.GenresContext, "GenreId", "Name", album.GenreId);
             return View(album);
         }
 

@@ -38,7 +38,7 @@ namespace MusicStore.Controllers
         }
 
         /// <summary>
-        /// A Browse() Controller művelet kinyeri az URL-ből a querystring-et:
+        /// A Browse(string) Controller művelet kinyeri az URL-ből a querystring-et:
         /// (.../Store/Browse?genre=Disco URL esetén: genre=Disco).
         /// Hozzáadunk egy genre paramétert, ekkor az ASP.MVC automatikusan átadja
         /// a számára a genre-hez tartozó értéket(Disco) a querystring-ből,
@@ -73,7 +73,7 @@ namespace MusicStore.Controllers
                 return View(genreModel);
         }
         /// <summary>
-        /// A Details() Controller művelet kinyeri az URL-ből a querystring-et:
+        /// A Details(int) Controller művelet kinyeri az URL-ből a querystring-et:
         /// (.../Store/Details?id=6 URL esetén: id=6).
         /// Hozzáadunk egy id paramétert, ekkor az ASP.MVC automatikusan átadja
         /// a számára a id-hez tartozó értéket(6) a querystring-ből,
