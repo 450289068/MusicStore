@@ -72,7 +72,8 @@ namespace MusicStore.Controllers
         /// olyan Property-ket is, amelyeket nem is definiáltunk. ( pl. ViewBag.Akarmi)
         /// Az űrlapon a listákból kiválasztott elemek ArtistId és GenreId
         /// néven utaznak tovább. Ezek az értékek SelectList objektumban térnek vissza
-        /// az űrlaphoz.
+        /// az űrlaphoz. A HTTP-GET Create() művelet segítségével tehát a ViewBag
+        /// segítségével átadunk két listát model objektum nélkül.
         /// </summary>
         /// <returns></returns>
         public ActionResult Create()
@@ -87,8 +88,11 @@ namespace MusicStore.Controllers
         }
 
         // POST: StoreManager/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="album"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "AlbumId,GenreId,ArtistId,Title,Price,AlbumArtUrl")] Album album)
