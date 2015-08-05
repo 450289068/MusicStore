@@ -80,7 +80,7 @@ namespace MusicStore.Controllers
             //A SelectList 3 paramétere(SelectList(db.Artists, "ArtistId", "Name") esetén):
             //1.: Az előadók listája, mely az űrlapon egy dropdownlist vezérlőben jelenik meg
             //2.: A lista aktuális értéke(SelectedValue)(amit átadunk, Előadó id-ja)
-            //3.: Amit megjelenítünk(Elaődó neve)
+            //3.: Amit megjelenítünk(Elődó neve)
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name");
             ViewBag.GenreId = new SelectList(db.GenresContext, "GenreId", "Description");
             return View();
