@@ -77,8 +77,8 @@ namespace MusicStore.Controllers
         /// <returns></returns>
         public ActionResult Create()
         {
-            //A SelectList 3 paramétere:
-            //1.:
+            //A SelectList 3 paramétere(SelectList(db.Artists, "ArtistId", "Name") esetén):
+            //1.: Az előadók listája, mely az űrlapon egy dropdownlist vezérlőben jelenik meg
             //2.:
             //3.:
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name");
