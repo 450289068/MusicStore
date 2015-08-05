@@ -72,8 +72,8 @@ namespace MusicStore.Controllers
         /// olyan Property-ket is, amelyeket nem is definiáltunk. ( pl. ViewBag.Akarmi)
         /// Az űrlapon a listákból kiválasztott elemek ArtistId és GenreId
         /// néven utaznak tovább. Ezek az értékek SelectList objektumban térnek vissza
-        /// az űrlaphoz. A HTTP-GET Create() művelet segítségével tehát a ViewBag
-        /// segítségével átadunk két listát model objektum nélkül.
+        /// az űrlaphoz. A HTTP-GET Create() művelet tehát a ViewBag
+        /// segítségével átad két listát model objektum nélkül a view()-nak.
         /// </summary>
         /// <returns></returns>
         public ActionResult Create()
