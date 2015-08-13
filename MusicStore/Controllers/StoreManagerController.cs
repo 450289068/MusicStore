@@ -83,7 +83,7 @@ namespace MusicStore.Controllers
             //2.: A lista aktuális értéke(SelectedValue)(amit átadunk, Előadó id-ja)
             //3.: Amit megjelenítünk(Elődó neve)
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name");
-            ViewBag.GenreId = new SelectList(db.GenresContext, "GenreId", "Description");
+            ViewBag.GenreId = new SelectList(db.GenresContext, "GenreId", "Name");
             return View();
         }
 
@@ -105,7 +105,7 @@ namespace MusicStore.Controllers
             }
 
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name", album.ArtistId);
-            ViewBag.GenreId = new SelectList(db.GenresContext, "GenreId", "Description", album.GenreId);
+            ViewBag.GenreId = new SelectList(db.GenresContext, "GenreId", "Name", album.GenreId);
             return View(album);
         }
 
